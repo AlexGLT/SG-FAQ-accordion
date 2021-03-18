@@ -4,12 +4,20 @@
 	align-items: center;
 
 	padding: 5px 10px;
-
+	transition: 0.2s;
 	border-bottom: solid 1px grey;
 }
 
+.accordion-active {
+	margin-left: 3px;
+	font-weight: 700;
+}
+
 .panel {
-	padding: 5px 5px;
+	margin: 5px 5px;
+	max-height: 0;
+	overflow: hidden;
+	transition: 0.2s;
 }
 
 .invisibility {
@@ -19,4 +27,10 @@
 .arrow {
 	margin-left: auto;
 	justify-self: right;
+
+	transition: 0.3s;
+}
+
+.arrow-active {
+	transform: rotate(180deg);
 }

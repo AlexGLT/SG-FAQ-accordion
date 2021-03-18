@@ -1,22 +1,34 @@
-import { useState } from "react";
+import { useRef } from "react";
 
 import "./FAQListItem.css";
 
 export default function FAQListItem({ accordion, text }) {
-	const [panelVisibility, setPanelVisibility] = useState("invisibility");
+	const accordionRef = useRef();
+	const panelRef = useRef();
+	const arrowRef = useRef();
 
 	return (
 		<>
-			<div className="accordion" onClick={togglePanelVisibility}>
+			<div ref={accordionRef} className="accordion" onClick={togglePanelVisibility}>
 				{accordion}
-				<img src="/images/icon-arrow-down.svg" className="arrow" alt="arrow-down" />
+				<img ref={arrowRef} src="/images/icon-arrow-down.svg" className="arrow" alt="arrow-down" />
 			</div>
-			<div className={`panel ${panelVisibility}`}>{text}</div>
+			<div ref={panelRef} className="panel">
+				{text}
+			</div>
 		</>
 	);
 
 	function togglePanelVisibility() {
-		if (panelVisibility) setPanelVisibility("");
-		else setPanelVisibility("invisibility");
+		const panel = panelRef.current;
+
+		if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+		} else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+		}
+
+		accordionRef.current.classList.toggle("accordion-active");
+		arrowRef.current.classList.toggle("arrow-active");
 	}
 }

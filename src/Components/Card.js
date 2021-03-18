@@ -6,7 +6,7 @@ export default function Card() {
 	return (
 		<div id="card">
 			<div id="image-container">keks</div>
-			<FAQList id="faq-list" />
+			<FAQList />
 		</div>
 	);
 }

@@ -1,3 +1,5 @@
+import "./FAQList.css";
+
 import FAQListItem from "./FAQListItem";
 
 const faqList = {
@@ -15,10 +17,13 @@ const faqList = {
 
 export default function Accordion() {
 	return (
-		<div id="faq-list">
-			{Object.keys(faqList).map((accordion, index) => (
-				<FAQListItem key={index} accordion={accordion} text={faqList[accordion]} />
-			))}
+		<div id="faq-container">
+			<h1 id="faq-header">FAQ</h1>
+			<div id="faq-list">
+				{Object.keys(faqList).map((accordion, index) => (
+					<FAQListItem key={index} accordion={accordion} text={faqList[accordion]} />
+				))}
+			</div>
 		</div>
 	);
 }
