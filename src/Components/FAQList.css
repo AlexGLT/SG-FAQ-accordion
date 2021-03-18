@@ -1,3 +1,19 @@
 #faq-container {
 	grid-area: faq-list;
+
+	min-width: 350px;
+
+	overflow: hidden;
+}
+
+#faq-header {
+	margin: 40px 0;
+}
+
+#faq-list {
+	margin: auto;
+}
+
+.faq-list-item-container {
+	border-bottom: solid 1px grey;
 }

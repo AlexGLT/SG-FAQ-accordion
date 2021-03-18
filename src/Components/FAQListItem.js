@@ -29,6 +29,7 @@ export default function FAQListItem({ accordion, text }) {
 		}
 
 		accordionRef.current.classList.toggle("accordion-active");
+		panelRef.current.classList.toggle("panel-active");
 		arrowRef.current.classList.toggle("arrow-active");
 	}
 }

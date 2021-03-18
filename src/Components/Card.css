@@ -2,7 +2,6 @@
 	width: 900px;
 	height: 500px;
 
-	border: solid black 1px;
 	border-radius: 25px;
 
 	display: inline-grid;
@@ -10,9 +9,47 @@
 	grid-template-rows: 1fr;
 	grid-template-areas: "image faq-list";
 
-	padding: 15px;
+	padding: 25px 25px 25px 0;
+
+	background-color: white;
 }
 
 #image-container {
 	grid-area: image;
+	align-self: center;
+
+	position: relative;
+
+	top: 0;
+	left: 0;
+	justify-self: flex-start;
+}
+
+#women-image {
+	position: relative;
+	left: -100px;
+}
+
+#box-image {
+	position: absolute;
+	top: 35%;
+	left: -130px;
+
+	animation-name: soar;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	transform-origin: bottom;
+	animation-timing-function: ease;
+}
+
+@keyframes soar {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+	100% {
+		transform: translateY(0);
+	}
 }
