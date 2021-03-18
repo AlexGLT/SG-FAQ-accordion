@@ -1,0 +1,22 @@
+.accordion {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	padding: 5px 10px;
+
+	border-bottom: solid 1px grey;
+}
+
+.panel {
+	padding: 5px 5px;
+}
+
+.invisibility {
+	display: none;
+}
+
+.arrow {
+	margin-left: auto;
+	justify-self: right;
+}

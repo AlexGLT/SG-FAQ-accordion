@@ -1,0 +1,22 @@
+#card {
+	width: 900px;
+	height: 500px;
+
+	border: solid black 1px;
+	border-radius: 25px;
+
+	display: inline-grid;
+	grid-template-columns: 0.4fr 0.6fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "image faq-list";
+
+	padding: 15px;
+}
+
+#image-container {
+	grid-area: image;
+}
+
+#faq-list {
+	grid-area: faq-list;
+}
