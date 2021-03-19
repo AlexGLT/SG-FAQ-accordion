@@ -10,35 +10,36 @@
 	grid-template-areas: "image faq-list";
 
 	padding: 25px 25px 25px 0;
-
 	background-color: white;
 }
 
 #image-container {
 	grid-area: image;
-	align-self: center;
+
+	display: flex;
+	align-items: center;
+
+	height: 100%;
 
 	position: relative;
 
-	top: 0;
-	left: 0;
-	justify-self: flex-start;
+	background: url("../images/bg-pattern-desktop.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: -75px 0;
 }
 
-#women-image {
+#woman-image {
 	position: relative;
-	left: -100px;
+	left: -15%;
 }
 
 #box-image {
 	position: absolute;
-	top: 35%;
-	left: -130px;
 
 	animation-name: soar;
 	animation-duration: 5s;
 	animation-iteration-count: infinite;
-	transform-origin: bottom;
 	animation-timing-function: ease;
 }
 
