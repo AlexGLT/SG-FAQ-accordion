@@ -1,0 +1,56 @@
+#card {
+	width: 900px;
+	height: 500px;
+
+	border-radius: 25px;
+
+	display: inline-grid;
+	grid-template-columns: 0.4fr 0.6fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "image faq-list";
+
+	padding: 25px 25px 25px 0;
+	background-color: white;
+}
+
+#image-container {
+	grid-area: image;
+
+	display: flex;
+	align-items: center;
+
+	height: 100%;
+
+	position: relative;
+
+	background: url("../images/bg-pattern-desktop.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: -75px 0;
+}
+
+#woman-image {
+	position: relative;
+	left: -15%;
+}
+
+#box-image {
+	position: absolute;
+
+	animation-name: soar;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease;
+}
+
+@keyframes soar {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-15px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
